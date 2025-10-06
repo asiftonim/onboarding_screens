@@ -11,10 +11,10 @@ class OnboardingView extends StatelessWidget {
 
   final OnboardingController controller = Get.find<OnboardingController>();
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.backgroundColor,
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 18.0.w),
         child: Column(
@@ -40,7 +40,6 @@ class OnboardingView extends StatelessWidget {
                       Text(textAlign:TextAlign.center,
                           page["subtitle"]!,
                           style:  TextStyle(fontSize: 16.sp)),
-
                     ],
                   );
                 },
@@ -85,7 +84,6 @@ class OnboardingView extends StatelessWidget {
               ],
             ),
             SizedBox(height: 20.h,),
-
           ],
         ),
       ),

@@ -5,7 +5,7 @@ class AppColors {
 
   // Brand Colors
   static const Color primary = Color(0xFFFC961A);
-  static Color secondary = Color(0xFF1BBFDC);
+  static Color secondary = Color(0xFF94A3B8);
 
 
   // Gradient Colors
@@ -31,7 +31,7 @@ class AppColors {
   // Background Colors
   static const Color backgroundLight = Color(0xFFF9FAFB);
   static const Color backgroundDark = Color(0xFF121212);
-  static const Color primaryBackground = Color(0xFFFFFFFF);
+  static const Color backgroundColor = Color(0xFFFFFFFF);
 
   // Surface Colors
   static const Color surfaceLight = Color(0xFFE0E0E0);
