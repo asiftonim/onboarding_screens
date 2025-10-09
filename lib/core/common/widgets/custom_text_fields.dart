@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../utils/constants/app_colors.dart';
 
 class CustomTextField extends StatefulWidget {
   final String hintText;
@@ -19,8 +20,8 @@ class CustomTextField extends StatefulWidget {
     this.prefixIcon,
     this.suffixIcon,
     this.obscureText = false,
-    this.borderColor = const Color(0xFF94A3B8),
-    this.focusBorderColor = const Color(0xFF94A3B8), // Focus color
+    this.borderColor = const Color(0xFF55606C),
+    this.focusBorderColor =  AppColors.primary,// Focus color
     this.fillColor = Colors.white,
     this.maxLines = 1,
   });
@@ -37,7 +38,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
     super.initState();
     _focusNode = FocusNode();
     _focusNode.addListener(() {
-      setState(() {}); // focus change হলে rebuild হবে
+      setState(() {});
     });
   }
 

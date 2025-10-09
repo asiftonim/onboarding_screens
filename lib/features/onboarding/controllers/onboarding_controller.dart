@@ -15,12 +15,12 @@ class OnboardingController extends GetxController {
       "subtitle": "Shop smarter, save time, and discover the best deals."
     },
     {
-      "image": ImagePath.onboardingPage1Image,
+      "image": ImagePath.onboardingPage1Image2,
       "title": "For Every Need",
       "subtitle": "One destination where all your needs come together - simple, fast, and easy."
     },
     {
-      "image": ImagePath.onboardingPage1Image,
+      "image": ImagePath.onboardingPage1Image3,
       "title": "Fast Delivery",
       "subtitle": "Fast, reliable delivery of all your favorites,straight to your doorstep whenever you need."
     },
@@ -29,7 +29,7 @@ class OnboardingController extends GetxController {
   void nextPage() {
     if (currentPage.value < pages.length - 1) {
       pageController.nextPage(
-        duration: const Duration(milliseconds: 300),
+        duration: const Duration(milliseconds: 500),
         curve: Curves.ease,
       );
     } else {
