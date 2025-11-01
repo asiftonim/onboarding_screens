@@ -4,8 +4,13 @@ import 'package:get/get.dart';
 import 'package:onboarding_screen/core/common/widgets/CustomText.dart';
 import 'package:onboarding_screen/core/common/widgets/custom_text_fields.dart';
 import 'package:onboarding_screen/core/utils/constants/app_colors.dart';
+import 'package:onboarding_screen/routes/app_routes.dart';
 import '../../../../core/common/widgets/custom_button.dart';
+import '../../../../core/common/widgets/two_button_dialogBox.dart';
+import '../../../../core/utils/constants/image_path.dart';
 import '../../controllers/login_controllers.dart';
+import '../widget/payment_bootom_shit.dart';
+
 
 class LogingScreens extends StatelessWidget {
    LogingScreens({super.key});
@@ -74,11 +79,56 @@ class LogingScreens extends StatelessWidget {
             ),SizedBox(height: 24.h,),
             CustomButton(
               text: "Log In",
-              onTap: (){},
+              onTap: (){
+                Get.toNamed(AppRoute.practiceWidget);
+              },
               color: AppColors.primary,        // background color
               borderColor: AppColors.primary,  // border color
               textColor: Colors.white,         // text color
             ),
+            ElevatedButton(onPressed: (){
+              showDialog(
+                context: context,
+                builder: (context) => TwoButtonDialogBox(
+                  imagePath: ImagePath.logOut,
+                  title: "Logout",
+                  subtitle: "Are you sure you want to log out of your account?",
+                  cancelButtonText: "Cancel",
+                  confirmButtonText: "Yes, Logout",
+                  onCancel: () {
+                    Navigator.pop(context);
+                  },
+                  onConfirm: () {
+                    // Perform logout action
+                  },
+                ),
+              );
+
+            }, child: Text("dddd")),
+            ElevatedButton(
+              onPressed: () {
+                showPaymentBottomSheet();
+              },
+              child: Text("Select Payment Method"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+
+              },
+              child: Text("Show drop down"),
+            ),
+
+            CustomButton(
+              text: "incoming",
+              onTap: (){
+                Get.toNamed(AppRoute.bookingListScreen);
+              },
+              color: AppColors.primary,        // background color
+              borderColor: AppColors.primary,  // border color
+              textColor: Colors.white,         // text color
+            ),
+
+
           ],
         ),
       ),
